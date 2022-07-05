@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: "coolapi"
-          image: "acrpierrc007.azurecr.io/coolapi:1.0.0"
+          image: "acrtfalb.azurecr.io/coolapi:1.0.0"
           ports:
           - containerPort: 3000
