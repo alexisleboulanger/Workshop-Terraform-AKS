@@ -1,4 +1,4 @@
-name: 'Terraform'
+name: 'Terraform Workflow ALB'
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   terraform:
-    name: 'Terraform'
+    name: 'Terraform Job ALB'
     runs-on: ubuntu-latest
     environment: production
 
