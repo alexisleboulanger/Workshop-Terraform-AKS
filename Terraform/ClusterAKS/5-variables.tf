@@ -4,7 +4,7 @@ variable "azure_region" {
   # To get names of Azure Region : az account list-locations
   # To check support of Availability Zone in the Azure Region see https://docs.microsoft.com/bs-latn-ba/azure/availability-zones/az-overview
   type    = string
-  default = "westeurope"
+  default = "eastus2"
 }
 
 #  Resource Group Name
@@ -23,13 +23,13 @@ variable "aks_vnet_name" {
 # AKS Cluster name
 variable "cluster_name" {
   type    = string
-  default = "AKS-000"
+  default = "aksalbcluster"
 }
 
 #AKS DNS name
 variable "dns_name" {
   type    = string
-  default = "aks0000"
+  default = "aksalb"
 }
 
 # sku of Azure managed K8S control plane

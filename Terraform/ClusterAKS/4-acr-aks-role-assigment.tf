@@ -12,7 +12,7 @@ data "terraform_remote_state" "Terra-datasource-acr" {
   
   config = {
     resource_group_name  = "RG-AKSCluster"    # mettre ici le nom du resource group de vos ressource
-    storage_account_name = "backendterrastan" # mettre le nom du compte de stockage créer dans le lab 1
+    storage_account_name = "backendterraalb" # mettre le nom du compte de stockage créer dans le lab 1
     container_name       = "tfstate"
     key                  = "acr.terraform.tfstate"
   }
@@ -27,15 +27,15 @@ resource "azurerm_role_assignment" "Terra-RoleAssigment-defaultnodepool" {
 
 # On donne le role ACR Pull au cluster AKS sur la registry ACR
 # cf. https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#containers
-# resource "azurerm_role_assignment" "Terra-RoleAssigment" {
-#   scope                =  data.terraform_remote_state.Terra-datasource-acr.outputs.acr-id    
-#   role_definition_name = "AcrPull"
-#   principal_id         = azurerm_kubernetes_cluster.Terra_aks.identity[0].principal_id
-# }
+resource "azurerm_role_assignment" "Terra-RoleAssigment" {
+  scope                =  data.terraform_remote_state.Terra-datasource-acr.outputs.acr-id    
+  role_definition_name = "AcrPull"
+  principal_id         = azurerm_kubernetes_cluster.Terra_aks.identity[0].principal_id
+}
 
 
 # juste pour vérifier la valeur
-# output "acr-id" {
-#   value =  data.terraform_remote_state.Terra-datasource-acr.outputs.acr-id
-# }
+output "acr-id" {
+  value =  data.terraform_remote_state.Terra-datasource-acr.outputs.acr-id
+}
 
