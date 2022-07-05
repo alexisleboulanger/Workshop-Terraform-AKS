@@ -1,10 +1,10 @@
-name: Workflow CI Application
+name: Workflow CI Application ALB
 
 on:
   workflow_dispatch:
 
 env: # variables 
-  REGISTRY_NAME: "acrpierrc007"
+  REGISTRY_NAME: "acrtfalb"
   APP_NAME: "coolapi"
   IMAGE_VERSION: "1.0.0"
 
