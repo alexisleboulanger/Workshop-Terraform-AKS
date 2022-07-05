@@ -1,0 +1,21 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] azurerm_container_registry.Terra-acr (expand)" [label = "azurerm_container_registry.Terra-acr", shape = "box"]
+		"[root] output.acr-id" [label = "output.acr-id", shape = "note"]
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"]" [label = "provider[\"registry.terraform.io/hashicorp/azurerm\"]", shape = "diamond"]
+		"[root] var.acrName" [label = "var.acrName", shape = "note"]
+		"[root] var.azureRegion" [label = "var.azureRegion", shape = "note"]
+		"[root] var.resourceGroupName" [label = "var.resourceGroupName", shape = "note"]
+		"[root] azurerm_container_registry.Terra-acr (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/azurerm\"]"
+		"[root] azurerm_container_registry.Terra-acr (expand)" -> "[root] var.acrName"
+		"[root] azurerm_container_registry.Terra-acr (expand)" -> "[root] var.azureRegion"
+		"[root] azurerm_container_registry.Terra-acr (expand)" -> "[root] var.resourceGroupName"
+		"[root] output.acr-id" -> "[root] azurerm_container_registry.Terra-acr (expand)"
+		"[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)" -> "[root] azurerm_container_registry.Terra-acr (expand)"
+		"[root] root" -> "[root] output.acr-id"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/azurerm\"] (close)"
+	}
+}
+
