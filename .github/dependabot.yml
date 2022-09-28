@@ -15,7 +15,7 @@ updates:
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "/API"
     schedule:
       interval: "daily"
       
@@ -26,7 +26,21 @@ updates:
       interval: "daily"
       
   - package-ecosystem: "terraform"
-    directory: "/"
+    directory: "/Terraform/AzureContainerRegistry"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 3
+          
+  - package-ecosystem: "terraform"
+    directory: "/Terraform/ClusterAKS"
+    schedule:
+      interval: "daily"
+          
+  - package-ecosystem: "terraform"
+    directory: "/Terraform/Pipeline-GH"
+    schedule:
+      interval: "daily"
+    
+        - package-ecosystem: "terraform"
+    directory: "/Terraform/StorageAccount"
+    schedule:
+      interval: "daily"
