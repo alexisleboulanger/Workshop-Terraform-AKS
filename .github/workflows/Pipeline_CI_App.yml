@@ -24,7 +24,7 @@ jobs: # 3 jobs qui s'enchaînent à la suite : 1 analyze-code - 2 test-unitaire 
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1 # https://github.com/github/codeql-action
@@ -43,7 +43,7 @@ jobs: # 3 jobs qui s'enchaînent à la suite : 1 analyze-code - 2 test-unitaire 
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Use Node.js
         uses: actions/setup-node@v1 # https://github.com/actions/setup-node
@@ -64,7 +64,7 @@ jobs: # 3 jobs qui s'enchaînent à la suite : 1 analyze-code - 2 test-unitaire 
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build de l'image de l'application
         run: |
