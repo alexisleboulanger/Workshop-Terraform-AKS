@@ -19,6 +19,17 @@ updates:
     schedule:
       interval: "daily"
 
+  # Maintain dependencies for npm
+  - package-ecosystem: "docker"
+    directory: "/API"
+    schedule:
+      interval: "daily"
+      
+  - package-ecosystem: gomod
+    directory: "/Kubernetes/Manifests/coolapi"
+    schedule:
+      interval: "daily"
+
   - package-ecosystem: "terraform"
     directory: "/Terraform/AzureContainerRegistry"
     schedule:
