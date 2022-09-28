@@ -19,12 +19,6 @@ updates:
     schedule:
       interval: "daily"
 
-  - package-ecosystem: "composer"
-    # Files stored in repository root
-    directory: "/"
-    schedule:
-      interval: "daily"
-
   - package-ecosystem: "terraform"
     directory: "/Terraform/AzureContainerRegistry"
     schedule:
