@@ -18,29 +18,29 @@ updates:
     directory: "/API"
     schedule:
       interval: "daily"
-      
+
   - package-ecosystem: "composer"
     # Files stored in repository root
     directory: "/"
     schedule:
       interval: "daily"
-      
+
   - package-ecosystem: "terraform"
     directory: "/Terraform/AzureContainerRegistry"
     schedule:
       interval: "daily"
-          
+
   - package-ecosystem: "terraform"
     directory: "/Terraform/ClusterAKS"
     schedule:
       interval: "daily"
-          
+
   - package-ecosystem: "terraform"
     directory: "/Terraform/Pipeline-GH"
     schedule:
       interval: "daily"
-    
-        - package-ecosystem: "terraform"
+
+  - package-ecosystem: "terraform"
     directory: "/Terraform/StorageAccount"
     schedule:
       interval: "daily"
