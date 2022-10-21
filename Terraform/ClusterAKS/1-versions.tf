@@ -28,7 +28,7 @@ terraform {
       # more info : https://github.com/terraform-providers/terraform-provider-azurerm
       # Check Changelog : https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/CHANGELOG.md
       source  = "hashicorp/azurerm"
-      version = "3.24.0"
+      version = "3.28.0"
     }
 
     kubernetes = {
